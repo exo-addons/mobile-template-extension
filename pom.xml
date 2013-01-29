@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.exoplatform</groupId>
+    <artifactId>exo.parent</artifactId>
+    <version>8.1</version>
+  </parent>
+  <groupId>com.exoplatform.addons</groupId>
+  <artifactId>mobile-extension</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>Mobile Extension Addons - Portal</name>
+  <properties>
+    <org.exoplatform.portal.version>3.2.3-PLF</org.exoplatform.portal.version>
+  </properties>
+  <modules>
+    <module>mobile-extension-apps</module>
+    <module>mobile-extension-config</module>
+    <module>mobile-extension-webapp</module>
+    <module>mobile-extension-webapp-wai</module>
+  </modules>
+  
+</project>
