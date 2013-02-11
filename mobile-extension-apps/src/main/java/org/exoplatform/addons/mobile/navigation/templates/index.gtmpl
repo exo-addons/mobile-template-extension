@@ -1,0 +1,35 @@
+<style type="text/css">
+  .logo {
+    background: url("${logo}") 0px 0px no-repeat;
+  }
+  .bg-color1 {
+    background-color: ${color1};
+  }
+  .color1 {
+    color: ${color1};
+  }
+  .bg-color2 {
+    background-color: ${color2};
+  }
+  .color2 {
+    color: ${color2};
+  }
+  .bg-color3 {
+    background-color: ${color3};
+  }
+  .color3 {
+    color: ${color3};
+  }
+  .bg-color4 {
+    background-color: ${color4};
+  }
+  .color4 {
+    color: ${color4};
+  }
+  .bg-color5 {
+    background-color: ${color5};
+  }
+  .color5 {
+    color: ${color5};
+  }
+</style>

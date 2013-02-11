@@ -1,22 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
-version="2.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+             version="2.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
    http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
-   <portlet>
-   	  <description xml:lang="EN">Mobile Navigation Portlet</description>
-      <portlet-name>MobileNavigationPortlet</portlet-name>
-      <display-name>Mobile Navigation Portlet</display-name>
-      <portlet-class>org.exoplatform.addons.mobile.navigation.MobileNavigationPortlet</portlet-class>
-      <supports>
-         <mime-type>text/html</mime-type>
-         <portlet-mode>view</portlet-mode>
-      </supports>
-      <portlet-info>
-         <title>Mobile Extension Navigation Portlet</title>
-         <short-title>Mobile Nav. Portlet</short-title>
-         <keywords>Mobile</keywords>
-      </portlet-info>
-   </portlet>
+  <portlet>
+    <portlet-name>MobileThemeApplication</portlet-name>
+    <display-name xml:lang="EN">Mobile Theme</display-name>
+    <portlet-class>org.exoplatform.addons.mobile.navigation.MobileThemePortlet</portlet-class>
+    <init-param>
+      <name>juzu.run_mode</name>
+      <value>prod</value>
+    </init-param>
+    <supports>
+      <mime-type>text/html</mime-type>
+    </supports>
+    <portlet-info>
+      <title>Mobile Theme</title>
+      <short-title>Mobile Theme</short-title>
+      <keywords>Mobile</keywords>
+    </portlet-info>
+    <portlet-preferences>
+      <preference>
+        <name>logo</name>
+        <value>http://localhost:8080/monimage.png</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>color1</name>
+        <value>#3366FF</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>color2</name>
+        <value>#333333</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>color3</name>
+        <value>#666666</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>color4</name>
+        <value>#AAAAAA</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>color5</name>
+        <value>#FFFFFF</value>
+        <read-only>false</read-only>
+      </preference>
+    </portlet-preferences>
+  </portlet>
+
 </portlet-app>

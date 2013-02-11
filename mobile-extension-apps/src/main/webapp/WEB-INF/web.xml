@@ -1,25 +1,16 @@
-<?xml version="1.0"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
-        version="2.5">
-	<listener>
-		<listener-class>
-			org.exoplatform.services.portletcontainer.impl.servlet.PortletApplicationListener
-		</listener-class>
-	</listener>
-
-	<servlet>
-		<servlet-name>PortletWrapper</servlet-name>
-		<servlet-class>
-			org.exoplatform.services.portletcontainer.impl.servlet.ServletWrapper
-		</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>PortletWrapper</servlet-name>
-		<url-pattern>/PortletWrapper</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>PortletWrapper</servlet-name>
-		<url-pattern>/PortletWrapper/*</url-pattern>
-	</servlet-mapping>        
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+  <display-name>MobileApps</display-name>
+  <servlet>
+    <servlet-name>AssetServlet</servlet-name>
+    <servlet-class>juzu.impl.asset.AssetServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AssetServlet</servlet-name>
+    <url-pattern>/assets/*</url-pattern>
+  </servlet-mapping>
 </web-app>

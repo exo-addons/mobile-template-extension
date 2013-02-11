@@ -7,39 +7,75 @@
     <groupId>com.exoplatform.addons</groupId>
     <artifactId>mobile-extension</artifactId>
     <version>1.0</version>
-  </parent>	
+  </parent>
+
   <artifactId>mobile-extension-apps</artifactId>
   <packaging>war</packaging>
 
   <name>Mobile Extension Addons - Apps</name>
 
+  <properties>
+    <maven.compiler.target>1.5</maven.compiler.target>
+    <maven.compiler.source>1.5</maven.compiler.source>
+    <juzu.version>0.6.0-beta15</juzu.version>
+  </properties>
+
+  <dependencies>
+    <!-- Application dependencies-->
+    <dependency>
+      <groupId>org.juzu</groupId>
+      <artifactId>juzu-core</artifactId>
+      <version>${juzu.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.juzu</groupId>
+      <artifactId>juzu-bom-core</artifactId>
+      <version>${juzu.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.juzu</groupId>
+      <artifactId>juzu-plugins-portlet</artifactId>
+      <version>${juzu.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.juzu</groupId>
+      <artifactId>juzu-plugins-less</artifactId>
+      <version>${juzu.version}</version>
+    </dependency>
+  </dependencies>
+
   <build>
-  <finalName>mobile-extension-apps</finalName>
-      <plugins>
-         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
+    <finalName>mobile-apps</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>2.3</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.juzu</groupId>
+            <artifactId>juzu-bom-core</artifactId>
+            <version>${juzu.version}</version>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>
+          <attach>true</attach>
+        </configuration>
+        <executions>
+          <execution>
+            <id>gatein</id>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <phase>package</phase>
             <configuration>
-               <source>1.5</source>
-               <target>1.5</target>
+              <descriptorRefs>
+                <descriptorRef>gatein</descriptorRef>
+              </descriptorRefs>
             </configuration>
-         </plugin>
-      </plugins>
-   </build>
-
-   <dependencies>
-      <dependency>
-         <groupId>javax.portlet</groupId>
-         <artifactId>portlet-api</artifactId>
-         <scope>provided</scope>
-         <version>2.0</version>
-      </dependency>
-      <dependency>
-			<groupId>org.exoplatform.portal</groupId>
-			<artifactId>exo.portal.webui.portal</artifactId>
-			<scope>provided</scope>
-			<version>3.2.5-PLF</version>
-		</dependency>
-   </dependencies>
-
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
