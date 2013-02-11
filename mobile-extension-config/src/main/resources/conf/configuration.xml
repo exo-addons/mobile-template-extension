@@ -26,7 +26,7 @@
 							<collection type="java.util.ArrayList">
 								<value>
 <!-- 									<string>mobile-website</string> -->
-									<string>mobile-website-wai</string>
+									<string>mobile-website</string>
 								</value>
 							</collection>
 						</field>					
