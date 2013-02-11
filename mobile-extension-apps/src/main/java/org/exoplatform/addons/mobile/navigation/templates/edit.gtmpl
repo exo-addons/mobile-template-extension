@@ -1,0 +1,13 @@
+<form action="@{save()}" method="POST">
+  Logo URL : <input name="logo" value="${logo}" size="40"><br>
+  <i>(it can be a relative path or absolute URL with http://)</i><br>
+  <br>
+  Color 1 : <input name="color1" value="${color1}"><br>
+  Color 2 : <input name="color2" value="${color2}"><br>
+  Color 3 : <input name="color3" value="${color3}"><br>
+  Color 4 : <input name="color4" value="${color4}"><br>
+  Color 5 : <input name="color5" value="${color5}"><br>
+  <br>
+  <br>
+  <input type="submit" value="Save Preferences">
+</form>

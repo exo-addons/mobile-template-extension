@@ -1,6 +1,7 @@
 <form action="@{save()}" method="POST">
-  Enter your URL : <input name="url" value="${url}"><br>
+  Enter your URL : <input name="url" value="${url}" size="40"><br>
   <i>(it can be a relative path or absolute URL with http://)</i>
   <br>
-  <input type="submit" value="Save">
+  <br>
+  <input type="submit" value="Save Preferences">
 </form>
