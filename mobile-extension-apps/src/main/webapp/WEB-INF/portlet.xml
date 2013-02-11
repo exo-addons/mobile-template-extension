@@ -73,7 +73,7 @@
     <portlet-preferences>
       <preference>
         <name>url</name>
-        <value>http://localhost:8080/portal/mobile</value>
+        <value>/portal/mobile</value>
         <read-only>false</read-only>
       </preference>
     </portlet-preferences>
