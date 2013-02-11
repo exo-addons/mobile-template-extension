@@ -25,8 +25,9 @@
    xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
    xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
    
-	<import>war:/conf/mobile-portal/mobileportal/mobileportal-template-configuration.xml</import>
-	<import>war:/conf/mobile-portal/mobileportal/resource-bundle-configuration.xml</import>
+	<import>war:/conf/mobile-portal/portal/portal-configuration.xml</import>
+	<import>war:/conf/mobile-portal/portal/resource-bundle-configuration.xml</import>
 	<import>war:/conf/mobile-portal/filter-configuration.xml</import>
 	<import>war:/conf/mobile-portal/wcm/deployment/templates-deployment-configuration.xml</import>
+	<import>war:/conf/mobile-portal/wcm/deployment/mobile-template-deployment-configuration.xml</import>
 </configuration>

@@ -37,22 +37,17 @@
       <type>org.exoplatform.portal.config.NewPortalConfigListener</type>
       <description>this listener init the portal configuration</description>
       <init-params>
-        <value-param>
-          <name>default.portal</name>
-          <description>The default portal for checking db is empty or not</description>
-          <value>classic</value>
-        </value-param> 
         <object-param>
           <name>site.templates.location</name>
           <description>description</description>
           <object type="org.exoplatform.portal.config.SiteConfigTemplates">
             <field name="location">
-              <string>war:/conf/mobile-portal/mobileportal</string>
+              <string>war:/conf/mobile-portal/portal</string>
             </field>
             <field name="portalTemplates">
               <collection type="java.util.HashSet">
                 <value>
-                  <string>MobilePortal</string>
+                  <string>mobile</string>
                 </value>
               </collection>
             </field>

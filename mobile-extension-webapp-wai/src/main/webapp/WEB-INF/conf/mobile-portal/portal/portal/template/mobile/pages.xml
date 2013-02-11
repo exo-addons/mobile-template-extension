@@ -25,12 +25,9 @@
     <title>Overview</title>
     <access-permissions>Everyone</access-permissions>
     <edit-permission>editor:/platform/web-contributors</edit-permission>
-    
-    <container id="BMBody" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
+    <container id="MobilePortalHome" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
       <access-permissions>Everyone</access-permissions>
-      
-      <!-- SCV for Main Content  -->
-      <portlet-application>
+        <portlet-application>
           <portlet>
             <application-ref>presentation</application-ref>
             <portlet-ref>SingleContentViewer</portlet-ref>
@@ -42,7 +39,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/main</value>
+                <value>/sites content/live/@owner@/web contents/site artifacts/banner-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -83,108 +80,30 @@
           <show-application-state>false</show-application-state>
           <show-application-mode>false</show-application-mode>
         </portlet-application>
-      
-        <!-- Navigation for Mobie -->
-        <portlet-application>
-			<portlet>
-				<application-ref>mobile-extension-apps</application-ref>
-				<portlet-ref>MobileNavigationPortlet</portlet-ref>
-			</portlet>
-			<title>Mobile Navigation</title>
-			<access-permissions>Everyone</access-permissions>
-			<show-info-bar>false</show-info-bar>
-			<show-application-state>true</show-application-state>
-		</portlet-application>
 		
-        <!-- SCV for News Bar -->
-		 <portlet-application>
-          <portlet>
-            <application-ref>presentation</application-ref>
-            <portlet-ref>SingleContentViewer</portlet-ref>
-            <preferences>
-              <preference>
-                <name>workspace</name>
-                <value>collaboration</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/links-bar</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>ShowQuickEdit</name>
-                <value>true</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>ShowPrintAction</name>
-                <value>false</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>ShowTOC</name>
-                <value>false</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>ShowTags</name>
-                <value>false</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>ShowCategories</name>
-                <value>false</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>ShowTitle</name>
-                <value>false</value>
-                <read-only>false</read-only>
-              </preference>
-            </preferences>
-          </portlet>
-          <title>Details Bar</title>
-          <access-permissions>Everyone</access-permissions>
-          <show-info-bar>false</show-info-bar>
-          <show-application-state>false</show-application-state>
-          <show-application-mode>false</show-application-mode>
-        </portlet-application>
-		
-        <!-- CLV for News Content -->
-        <portlet-application>
+		<portlet-application>
           <portlet>
             <application-ref>presentation</application-ref>
             <portlet-ref>ContentListViewerPortlet</portlet-ref>
             <preferences>
               <preference>
                 <name>folderPath</name>
-                <value>repository:collaboration:/sites content/live/@owner@/web contents/newsfolder</value>
+                <value>repository:collaboration:/sites content/live/@owner@/categories/@owner@</value>
                 <read-only>false</read-only>
               </preference>
-			  <preference>
-                <name>orderBy</name>
-                <value>exo:dateCreated</value>
+              <preference>
+                <name>nodeDrive</name>
+                <value>Managed Sites</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
                 <name>orderType</name>
-                <value>DESC</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>header</name>
-                <value>Latest News</value>
+                <value>ASC</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
                 <name>formViewTemplatePath</name>
-                <value>/exo:ecm/views/templates/content-list-viewer/list/OneColumnCLVTemplate.gtmpl</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>paginatorTemplatePath</name>
-                <value>/exo:ecm/views/templates/content-list-viewer/paginators/UIPaginatorEmpty.gtmpl</value>
+                <value>/exo:ecm/views/templates/content-list-viewer/list/CategoryNavigationTemplate.gtmpl</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -194,7 +113,12 @@
               </preference>
               <preference>
                 <name>itemsPerPage</name>
-                <value>3</value>
+                <value>5</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>showTitle</name>
+                <value>false</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -203,17 +127,7 @@
                 <read-only>false</read-only>
               </preference>
               <preference>
-                <name>showReadmore</name>
-                <value>true</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
                 <name>showHeader</name>
-                <value>false</value>
-                <read-only>false</read-only>
-              </preference>
-              <preference>
-                <name>showTitle</name>
                 <value>false</value>
                 <read-only>false</read-only>
               </preference>
@@ -224,21 +138,90 @@
               </preference>
             </preferences>
           </portlet>
-          <title>Latest news</title>
+          <title>Categories Navigation</title>
           <access-permissions>Everyone</access-permissions>
           <show-info-bar>false</show-info-bar>
           <show-application-state>false</show-application-state>
           <show-application-mode>false</show-application-mode>
         </portlet-application>
+        
+		<portlet-application>
+            <portlet>
+              <application-ref>presentation</application-ref>
+              <portlet-ref>SingleContentViewer</portlet-ref>
+              <preferences>
+                <preference>
+                  <name>nodeDrive</name>
+                  <value>Managed Sites</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>workspace</name>
+                  <value>collaboration</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>nodeIdentifier</name>
+                  <value>/sites content/live/@owner@/categories/@owner@/home</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ShowQuickEdit</name>
+                  <value>true</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ShowPrintAction</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ShowTOC</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ShowCategories</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ShowTags</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ContextEnable</name>
+                  <value>true</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ParameterName</name>
+                  <value>content-id</value>
+                  <read-only>false</read-only>
+                </preference>
+                <preference>
+                  <name>ShowTitle</name>
+                  <value>false</value>
+                  <read-only>false</read-only>
+                </preference>
+              </preferences>
+            </portlet>
+            <title>Main content</title>
+            <access-permissions>Everyone</access-permissions>
+            <show-info-bar>false</show-info-bar>
+            <show-application-state>false</show-application-state>
+            <show-application-mode>false</show-application-mode>
+          </portlet-application>
     </container>
   </page>
-  	
+  
   <page>
     <name>news</name>
     <title>News</title>
     <access-permissions>Everyone</access-permissions>
     <edit-permission>editor:/platform/web-contributors</edit-permission>
-    
+
     <!-- SCV for Main Content  -->
       <portlet-application>
           <portlet>

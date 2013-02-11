@@ -37,7 +37,7 @@
     <node>
       <uri>news</uri>
       <name>news</name>
-      <label xml:lang="en">News}</label>
+      <label xml:lang="en">News</label>
       <visibility>DISPLAYED</visibility>
       <page-reference>portal::@owner@::news</page-reference>
     </node>

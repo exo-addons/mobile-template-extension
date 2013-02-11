@@ -42,12 +42,12 @@
         <values-param>
           <name>ignored.portals</name>
           <description>ignored portal list</description>
-          <value>MobilePortal</value>
+          <value>mobile</value>
         </values-param>
       </init-params>
     </component-plugin>
   </external-component-plugins>
 
-  <import>war:/conf/mobile-portal/wcm/deployment/template-MobilePortal-deployment-configuration.xml</import>
+  <import>war:/conf/mobile-portal/wcm/deployment/templates/template-mobile-deployment-configuration.xml</import>
 
 </configuration>

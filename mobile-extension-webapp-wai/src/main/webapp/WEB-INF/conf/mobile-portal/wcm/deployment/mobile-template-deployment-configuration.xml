@@ -25,26 +25,25 @@
    xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
    xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
 
-	<external-component-plugins>
-		<!-- The full qualified name of the ResourceBundleService -->
-		<target-component>org.exoplatform.services.resources.ResourceBundleService</target-component>
-		<component-plugin>
-			<!-- The name of the plugin -->
-			<name>Sample ResourceBundle Plugin</name>
-			<!-- The name of the method to call on the ResourceBundleService in order to register the ResourceBundles -->
-			<set-method>addResourceBundle</set-method>
-			<!-- The full qualified name of the BaseResourceBundlePlugin -->
-			<type>org.exoplatform.services.resources.impl.BaseResourceBundlePlugin</type>
-			<init-params>
-				<values-param>
-					<name>init.resources</name>
-        			<value>locale.portal.mobile</value>
-				</values-param>
-				<values-param>
-					<name>portal.resource.names</name>
-			        <value>locale.portal.mobile</value>
-				</values-param>
-			</init-params>
-		</component-plugin>
-	</external-component-plugins>
+
+  <!-- Deploy template for Content List Viewer Portlet -->
+  <external-component-plugins>
+    <target-component>org.exoplatform.services.cms.views.ApplicationTemplateManagerService</target-component>
+    <component-plugin>
+      <name>clv.templates.plugin</name>
+      <set-method>addPlugin</set-method>
+      <type>org.exoplatform.services.cms.views.PortletTemplatePlugin</type>
+      <description>This plugin is used to import views templates for Content List Viewer</description>
+      <init-params>
+        <value-param>
+          <name>portletName</name>
+          <value>content-list-viewer</value>
+        </value-param>
+        <value-param>
+          <name>portlet.template.path</name>
+          <value>war:/conf/mobile-portal/wcm/artifacts/application-templates/mobile/content-list-viewer</value>
+        </value-param>
+      </init-params>
+    </component-plugin>
+  </external-component-plugins>
 </configuration>

@@ -15,9 +15,9 @@
     <org.exoplatform.portal.version>3.2.3-PLF</org.exoplatform.portal.version>
   </properties>
   <modules>
-    <module>mobile-extension-apps</module>
+    <!--module>mobile-extension-apps</module-->
     <module>mobile-extension-config</module>
-    <module>mobile-extension-webapp</module>
+    <!--module>mobile-extension-webapp</module-->
     <module>mobile-extension-webapp-wai</module>
   </modules>
   
