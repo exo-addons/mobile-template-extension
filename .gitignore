@@ -1,0 +1,7 @@
+.DS_Store
+*.iml
+mobile-extension-apps/target/*
+mobile-extension-config/target/*
+mobile-extension-webapp/target/*
+mobile-extension-webapp-wai/target/*
+
