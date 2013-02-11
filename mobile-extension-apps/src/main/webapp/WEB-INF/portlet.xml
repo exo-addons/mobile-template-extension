@@ -17,6 +17,9 @@
       <portlet-mode>VIEW</portlet-mode>
       <portlet-mode>EDIT</portlet-mode>
     </supports>
+    <supported-locale>en</supported-locale>
+    <supported-locale>fr</supported-locale>
+    <resource-bundle>locale.portlet.mobile.Resource</resource-bundle>
     <portlet-info>
       <title>Mobile Theme</title>
       <short-title>Mobile Theme</short-title>
@@ -69,6 +72,9 @@
       <portlet-mode>VIEW</portlet-mode>
       <portlet-mode>EDIT</portlet-mode>
     </supports>
+    <supported-locale>en</supported-locale>
+    <supported-locale>fr</supported-locale>
+    <resource-bundle>locale.portlet.mobile.Resource</resource-bundle>
     <portlet-info>
       <title>Mobile Switcher</title>
       <short-title>Mobile Switcher</short-title>
