@@ -1,0 +1,13 @@
+<% feed.items.each { item -> %>
+
+ <span class="kuler-item" style="padding: 3px; float: left;"
+      data-color-1="<%=item.color(0)%>"
+      data-color-2="<%=item.color(1)%>"
+      data-color-3="<%=item.color(2)%>"
+      data-color-4="<%=item.color(3)%>"
+      data-color-5="<%=item.color(4)%>"
+   >
+   <img src="<%=item.kulerImage%>" />
+ </span>
+
+<% } %>
