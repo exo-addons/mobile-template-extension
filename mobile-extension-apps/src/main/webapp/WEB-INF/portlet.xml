@@ -33,27 +33,27 @@
       </preference>
       <preference>
         <name>color1</name>
-        <value>#3366FF</value>
+        <value>#C4D4CB</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color2</name>
-        <value>#333333</value>
+        <value>#55665E</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color3</name>
-        <value>#666666</value>
+        <value>#30282A</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color4</name>
-        <value>#AAAAAA</value>
+        <value>#542733</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color5</name>
-        <value>#FFFFFF</value>
+        <value>#542733</value>
         <read-only>false</read-only>
       </preference>
     </portlet-preferences>
