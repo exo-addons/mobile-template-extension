@@ -11,6 +11,9 @@
           &{mobile.addon.color} 5 : <input name="color5" value="${color5}"><br>
         </span>
         <span id="kuler-swatches"></span>
+        <span>
+          <a class="kuler-more" href="#" style="padding: 3px; float: left;width: 470px;">More Themes</a>
+        </span>
       </div>
       <br>
       <br>
@@ -23,19 +26,28 @@
 
 <script>
   $(document).ready(function(){
-    $("#kuler-swatches").load("@{getFeed()}", function(data) {
-      $(".kuler-item").on("click", function() {
-        color1 = $(this).attr("data-color-1");
-        color2 = $(this).attr("data-color-2");
-        color3 = $(this).attr("data-color-3");
-        color4 = $(this).attr("data-color-4");
-        color5 = $(this).attr("data-color-5");
-        $("input[name=color1]").val(color1);
-        $("input[name=color2]").val(color2);
-        $("input[name=color3]").val(color3);
-        $("input[name=color4]").val(color4);
-        $("input[name=color5]").val(color5);
-      });
+    $(".kuler-more").on("click", function() {
+      loadThemes("random");
     });
+
+    function loadThemes (type) {
+
+      $("#kuler-swatches").load("@{getFeed()}", {"type": type}, function(data) {
+        $(".kuler-item").on("click", function() {
+          color1 = $(this).attr("data-color-1");
+          color2 = $(this).attr("data-color-2");
+          color3 = $(this).attr("data-color-3");
+          color4 = $(this).attr("data-color-4");
+          color5 = $(this).attr("data-color-5");
+          $("input[name=color1]").val(color1);
+          $("input[name=color2]").val(color2);
+          $("input[name=color3]").val(color3);
+          $("input[name=color4]").val(color4);
+          $("input[name=color5]").val(color5);
+        });
+      });
+    }
+    loadThemes("rating");
+
   });
 </script>

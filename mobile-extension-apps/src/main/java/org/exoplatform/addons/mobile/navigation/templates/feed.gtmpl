@@ -1,6 +1,6 @@
 <% feed.items.each { item -> %>
 
- <span class="kuler-item" style="padding: 3px; float: left;"
+ <span class="kuler-item" style="padding: 3px; float: left; cursor: pointer;"
       data-color-1="<%=item.color(0)%>"
       data-color-2="<%=item.color(1)%>"
       data-color-3="<%=item.color(2)%>"

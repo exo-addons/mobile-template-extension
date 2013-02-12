@@ -45,7 +45,7 @@ public class MobileThemeApplication {
   @Path("feed.gtmpl")
   Template feedTemplate;
 
-  String url_ = "https://kuler-api.adobe.com/rss/get.cfm?listtype=rating&key=9A2E468872FE17525244F66635D22B83";
+  String url_ = "https://kuler-api.adobe.com/rss/get.cfm?key=9A2E468872FE17525244F66635D22B83&listtype=";
   int size_ = 20;
 
   @View
@@ -99,9 +99,9 @@ public class MobileThemeApplication {
   }
 
   @Resource
-  public void getFeed() throws Exception {
+  public void getFeed(String type) throws Exception {
 
-    Document document_ = getData(url_);
+    Document document_ = getData(url_+type);
 
     NodeList nodeList = document_.getElementsByTagName("item");
 
