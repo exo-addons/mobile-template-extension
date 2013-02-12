@@ -10,9 +10,12 @@
           &{mobile.addon.color} 4 : <input name="color4" value="${color4}"><br>
           &{mobile.addon.color} 5 : <input name="color5" value="${color5}"><br>
         </span>
-        <span id="kuler-swatches"></span>
         <span>
-          <a class="kuler-more" href="#" style="padding: 3px; float: left;width: 470px;">More Themes</a>
+          <a href="http://kuler.adobe.com" target="_new"><img src="/mobile-apps/img/ku_50pxBugOnly.png" width="25px" height="25px" /></a>
+          &nbsp;&nbsp;&nbsp;
+          <a class="kuler-random" href="#" style="padding: 3px; float: left;width: 200px;text-decoration: underline;">&{mobile.addon.random}</a>
+          <a class="kuler-rated" href="#" style="padding: 3px; float: left;width: 200px;text-decoration: underline;">&{mobile.addon.rating}</a>
+          <span id="kuler-swatches"></span>
         </span>
       </div>
       <br>
@@ -26,8 +29,12 @@
 
 <script>
   $(document).ready(function(){
-    $(".kuler-more").on("click", function() {
+    $(".kuler-random").on("click", function() {
       loadThemes("random");
+    });
+
+    $(".kuler-rated").on("click", function() {
+      loadThemes("rating");
     });
 
     function loadThemes (type) {
