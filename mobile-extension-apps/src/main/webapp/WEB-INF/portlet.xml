@@ -28,7 +28,7 @@
     <portlet-preferences>
       <preference>
         <name>logo</name>
-        <value>http://localhost:8080/monimage.png</value>
+        <value>/rest/jcr/repository/collaboration/sites%20content/live/default/web%20contents/site%20artifacts/welcome/medias/images/Logo.png</value>
         <read-only>false</read-only>
       </preference>
       <preference>

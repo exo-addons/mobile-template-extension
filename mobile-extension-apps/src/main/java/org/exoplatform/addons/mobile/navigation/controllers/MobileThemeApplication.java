@@ -51,7 +51,7 @@ public class MobileThemeApplication {
   @View
   public void index(RenderContext renderContext) throws IOException
   {
-    String logoURL = portletPreferences.getValue("logo", "http://www.exoplatform.com/rest/jcr/repository/collaboration/sites%20content/live/website/web%20contents/10.Homepage/newhomepage/images/LogoHeaderTop.png");
+    String logoURL = portletPreferences.getValue("logo", "/rest/jcr/repository/collaboration/sites%20content/live/default/web%20contents/site%20artifacts/welcome/medias/images/Logo.png");
     String color1 = portletPreferences.getValue("color1", "#3366FF");
     String color2 = portletPreferences.getValue("color2", "#333333");
     String color3 = portletPreferences.getValue("color3", "#666666");
