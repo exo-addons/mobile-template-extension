@@ -27,7 +27,8 @@
     <edit-permission>editor:/platform/web-contributors</edit-permission>
     <container id="MobilePortalHome" template="system:/groovy/portal/webui/container/UIContainer.gtmpl">
       <access-permissions>Everyone</access-permissions>
-        <portlet-application>
+        <!-- Website Banner -->
+		<portlet-application>
           <portlet>
             <application-ref>presentation</application-ref>
             <portlet-ref>SingleContentViewer</portlet-ref>
@@ -74,13 +75,179 @@
               </preference>
             </preferences>
           </portlet>
-          <title>Main</title>
+          <title>Mobile Website Banner SCV</title>
           <access-permissions>Everyone</access-permissions>
           <show-info-bar>false</show-info-bar>
           <show-application-state>false</show-application-state>
           <show-application-mode>false</show-application-mode>
         </portlet-application>
 		
+		<!-- Search Bar -->
+        <portlet-application>
+          <portlet>
+            <application-ref>presentation</application-ref>
+            <portlet-ref>SingleContentViewer</portlet-ref>
+            <preferences>
+              <preference>
+                <name>workspace</name>
+                <value>collaboration</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>nodeIdentifier</name>
+                <value>/sites content/live/@owner@/web contents/site artifacts/search-bar-mobile</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowQuickEdit</name>
+                <value>true</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowPrintAction</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTOC</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTags</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowCategories</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTitle</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Search Bar SCV</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+          <show-application-state>false</show-application-state>
+          <show-application-mode>false</show-application-mode>
+        </portlet-application>
+		
+		<!-- Search Box -->
+        <portlet-application>
+          <portlet>
+            <application-ref>presentation</application-ref>
+            <portlet-ref>SingleContentViewer</portlet-ref>
+            <preferences>
+              <preference>
+                <name>workspace</name>
+                <value>collaboration</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>nodeIdentifier</name>
+                <value>/sites content/live/@owner@/web contents/site artifacts/search-box-mobile</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowQuickEdit</name>
+                <value>true</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowPrintAction</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTOC</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTags</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowCategories</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTitle</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Search Box SCV</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+          <show-application-state>false</show-application-state>
+          <show-application-mode>false</show-application-mode>
+        </portlet-application>
+		
+		<!-- Browse Bar -->
+        <portlet-application>
+          <portlet>
+            <application-ref>presentation</application-ref>
+            <portlet-ref>SingleContentViewer</portlet-ref>
+            <preferences>
+              <preference>
+                <name>workspace</name>
+                <value>collaboration</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>nodeIdentifier</name>
+                <value>/sites content/live/@owner@/web contents/site artifacts/browse-bar-mobile</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowQuickEdit</name>
+                <value>true</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowPrintAction</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTOC</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTags</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowCategories</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTitle</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Browse Bar SCV</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+          <show-application-state>false</show-application-state>
+          <show-application-mode>false</show-application-mode>
+        </portlet-application>
+		
+		<!-- Navigation Menu -->
 		<portlet-application>
           <portlet>
             <application-ref>presentation</application-ref>
@@ -144,7 +311,7 @@
           <show-application-state>false</show-application-state>
           <show-application-mode>false</show-application-mode>
         </portlet-application>
-        
+        <!-- Content Display Area-->
 		<portlet-application>
             <portlet>
               <application-ref>presentation</application-ref>
@@ -213,6 +380,20 @@
             <show-application-state>false</show-application-state>
             <show-application-mode>false</show-application-mode>
           </portlet-application>
+		  
+		<!-- Mobile Theme Application -->
+		<portlet-application>
+		      <portlet>
+		        <application-ref>mobile-apps</application-ref>
+		        <portlet-ref>MobileThemeApplication</portlet-ref>
+		        <preferences></preferences>
+		      </portlet>
+		      <title>Mobile Theme</title>
+		      <access-permissions>Everyone</access-permissions>
+		      <show-info-bar>false</show-info-bar>
+		      <show-application-state>false</show-application-state>
+		      <show-application-mode>false</show-application-mode>
+		</portlet-application>  
     </container>
   </page>
   
@@ -1559,11 +1740,11 @@
       	<access-permissions>Everyone</access-permissions>
 	        <portlet-application>
 		      <portlet>
-		        <application-ref>bluemountain-apps</application-ref>
-		        <portlet-ref>BMAddressBookPortlet</portlet-ref>
+		        <application-ref>mobile-extension-apps</application-ref>
+		        <portlet-ref>MobileThemeApplication</portlet-ref>
 		        <preferences></preferences>
 		      </portlet>
-		      <title>Blue Mountain AddressBook Portlet</title>
+		      <title>Mobile Theme</title>
 		      <access-permissions>Everyone</access-permissions>
 		      <show-info-bar>false</show-info-bar>
 		      <show-application-state>false</show-application-state>

@@ -31,7 +31,7 @@
     <type>org.exoplatform.services.wcm.portal.artifacts.CreatePortalArtifactsServiceImpl</type>
   </component>
 
-  <external-component-plugins>
+  <!--external-component-plugins>
     <target-component>org.exoplatform.services.wcm.portal.artifacts.CreatePortalArtifactsService</target-component>
     <component-plugin>
       <name>Add ignored portals</name>
@@ -46,7 +46,7 @@
         </values-param>
       </init-params>
     </component-plugin>
-  </external-component-plugins>
+  </external-component-plugins-->
 
   <import>war:/conf/mobile-portal/wcm/deployment/templates/template-mobile-deployment-configuration.xml</import>
 

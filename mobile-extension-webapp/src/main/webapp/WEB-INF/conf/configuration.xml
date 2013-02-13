@@ -28,6 +28,6 @@
 	<import>war:/conf/mobile-portal/portal/portal-configuration.xml</import>
 	<import>war:/conf/mobile-portal/portal/resource-bundle-configuration.xml</import>
 	<import>war:/conf/mobile-portal/filter-configuration.xml</import>
-	<import>war:/conf/mobile-portal/wcm/deployment/templates-deployment-configuration.xml</import>
+	<import>war:/conf/mobile-portal/wcm/deployment/templates/template-mobile-deployment-configuration.xml</import>
 	<import>war:/conf/mobile-portal/wcm/deployment/mobile-template-deployment-configuration.xml</import>
 </configuration>
