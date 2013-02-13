@@ -66,9 +66,9 @@
     }
     loadThemes("rating");
 
-//    $('.colors').change(function() {
-//      refreshPreviews();
-//    });
+    $('.colors').change(function() {
+      refreshPreviews();
+    });
 
 
   });
