@@ -1,27 +1,55 @@
     <form action="@{save()}" method="POST">
-      &{mobile.addon.logo.url} : <input name="logo" value="${logo}" size="40"><br>
-      <i>(&{mobile.addon.url.desc})</i><br>
-      <br>
-      <div>
-        <span style="float: left; width: 280px;">
-          &{mobile.addon.color} 1 : <input name="color1" class="colors" value="${color1}" size="7">&nbsp;<span id="preview-color1" style="padding: 2px 9px;"></span><br>
-          &{mobile.addon.color} 2 : <input name="color2" class="colors" value="${color2}" size="7">&nbsp;<span id="preview-color2" style="padding: 2px 9px;"></span><br>
-          &{mobile.addon.color} 3 : <input name="color3" class="colors" value="${color3}" size="7">&nbsp;<span id="preview-color3" style="padding: 2px 9px;"></span><br>
-          &{mobile.addon.color} 4 : <input name="color4" class="colors" value="${color4}" size="7">&nbsp;<span id="preview-color4" style="padding: 2px 9px;"></span><br>
-          &{mobile.addon.color} 5 : <input name="color5" class="colors" value="${color5}" size="7">&nbsp;<span id="preview-color5" style="padding: 2px 9px;"></span><br>
+      &{mobile.addon.logo.url}&nbsp;<i style=" color: lightgray;font-size: 10px;" >(&{mobile.addon.url.desc})</i>&nbsp;<input name="logo" value="${logo}" size="140" style="width:100%"><br>
+      <div class="bgPan">
+        <span class="kulerPan">
+			  <span class="labelPan">&{mobile.addon.color} 1</span>
+			  <input style="width: 90px;" name="color1" class="colors" value="${color1}" size="7">&nbsp;
+			  <span id="preview-color1" style="padding: 2px 9px;"></span>
+		  <br>
+			  <span class="labelPan">&{mobile.addon.color} 2</span>
+			  <input style="width: 90px;" name="color2" class="colors" value="${color2}" size="7">&nbsp;
+			  <span id="preview-color2" style="padding: 2px 9px;"></span>
+		  <br>
+			  <span class="labelPan">&{mobile.addon.color} 3</span>
+			  <input style="width: 90px;" name="color3" class="colors" value="${color3}" size="7">&nbsp;
+			  <span id="preview-color3" style="padding: 2px 9px;"></span>
+		  <br>
+			  <span class="labelPan">&{mobile.addon.color} 4</span>
+			  <input style="width: 90px;" name="color4" class="colors" value="${color4}" size="7">&nbsp;
+			  <span id="preview-color4" style="padding: 2px 9px;"></span>
+		  <br>
+			  <span class="labelPan">&{mobile.addon.color} 5</span>
+			  <input style="width: 90px;" name="color5" class="colors" value="${color5}" size="7">&nbsp;
+			  <span id="preview-color5" style="padding: 2px 9px;"></span>
+		  <br>
         </span>
         <span>
-          <a href="http://kuler.adobe.com" target="_new"><img src="/mobile-apps/img/ku_50pxBugOnly.png" width="25px" height="25px" /></a>
+          <a style="text-align: center; float: right; width: 58px;" href="http://kuler.adobe.com" target="_new">
+			<img src="/mobile-apps/img/ku_50pxBugOnly.png" width="25px" height="25px" />
+		  </a>
           &nbsp;&nbsp;&nbsp;
-          <a class="kuler-random" href="#" style="padding: 3px; float: left;width: 200px;text-decoration: underline;">&{mobile.addon.random}</a>
-          <a class="kuler-rated" href="#" style="padding: 3px; float: left;width: 200px;text-decoration: underline;">&{mobile.addon.rating}</a>
+          <a class="icon-default" href="#">
+			<i class="icon-refresh" title="&{mobile.addon.default}">&nbsp;</i>
+		  </a>
+          <a class="kuler-random labelLink" href="#">&{mobile.addon.random}</a>
+          <a class="kuler-rated labelLink" href="#">&{mobile.addon.rating}</a>
+          <a class="kuler-popular labelLink" href="#">&{mobile.addon.popular}</a>
           <span id="kuler-swatches"></span>
         </span>
       </div>
-      <br>
-      <br>
-      <br>
-      <div style="clear:both; padding: 20px 50px;">
+      <div>
+        <span class="contentPan">
+			   <span class="labelPan">&{mobile.addon.banner}</span>
+			   <input style="width: 90px;" name="colorBanner" class="colors" value="${colorBanner}" size="7">&nbsp;
+			   <span id="preview-colorBanner" style="padding: 2px 9px;"></span>
+		   <br>
+			   <span class="labelPan">&{mobile.addon.content}</span>
+			   <input style="width: 90px;" name="colorContent" class="colors" value="${colorContent}" size="7">&nbsp;
+			   <span id="preview-colorContent" style="padding: 2px 9px;"></span>
+		   <br>
+        </span>
+      </div>
+      <div style="clear:both; padding: 10px 0 0 50px;">
         <input type="submit" value="&{mobile.addon.save}">
       </div>
     </form>
@@ -29,20 +57,58 @@
 
 <script>
   $(document).ready(function(){
-    $(".kuler-random").on("click", function() {
-      loadThemes("random");
+	 //setDefaultTheme();
+  
+    $(".icon-default").on("click", function() {setDefaultTheme();});
+	
+	$(".kuler-popular").on("click", function() {
+      loadThemes("popular");
+	   makeActive($(".kuler-popular"), $(".kuler-random") , $(".kuler-rated"));
     });
-
-    $(".kuler-rated").on("click", function() {
+	$(".kuler-rated").on("click", function() {
       loadThemes("rating");
+	  makeActive($(".kuler-rated"), $(".kuler-random") , $(".kuler-popular"));
+    });
+	$(".kuler-random").on("click", function() {
+      loadThemes("random");
+	  makeActive($(".kuler-random"), $(".kuler-rated") , $(".kuler-popular"));
     });
 
+    function setDefaultTheme(){
+		  color1 = "#333333";
+          color2 = "#486A9D";
+          color3 = "#F6F6F6";
+          color4 = "#E6E6E6";
+          color5 = "#FFCB08";
+          colorBanner = "#FFFFFF";
+          colorContent = "#1B1B1B";
+          $("input[name=color1]").val(color1);
+          $("input[name=color2]").val(color2);
+          $("input[name=color3]").val(color3);
+          $("input[name=color4]").val(color4);
+          $("input[name=color5]").val(color5);
+          $("input[name=colorBanner]").val(colorBanner);
+          $("input[name=colorContent]").val(colorContent);
+          refreshPreviews();
+	}
+	function makeActive(activeTab, inactiveTab1, inactiveTab2) {
+		activeTab.css('background-color', '#F1F1F1');
+		activeTab.css('color', 'black');
+		
+	    inactiveTab1.css('background-color', 'transparent');
+	    inactiveTab1.css('color', 'lightgray');
+	    inactiveTab2.css('background-color', 'transparent');
+	    inactiveTab2.css('color', 'lightgray');
+	}
+	
     function refreshPreviews() {
       $("#preview-color1").css("background-color", $("input[name=color1]").val());
       $("#preview-color2").css("background-color", $("input[name=color2]").val());
       $("#preview-color3").css("background-color", $("input[name=color3]").val());
       $("#preview-color4").css("background-color", $("input[name=color4]").val());
       $("#preview-color5").css("background-color", $("input[name=color5]").val());
+      $("#preview-colorBanner").css("background-color", $("input[name=colorBanner]").val());
+      $("#preview-colorContent").css("background-color", $("input[name=colorContent]").val());
     }
     refreshPreviews();
 
@@ -64,7 +130,7 @@
         });
       });
     }
-    loadThemes("rating");
+    loadThemes("popular");
 
     $('.colors').change(function() {
       refreshPreviews();

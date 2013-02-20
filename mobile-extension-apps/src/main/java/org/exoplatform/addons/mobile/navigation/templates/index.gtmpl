@@ -1,35 +1,64 @@
 <style type="text/css">
-  .logo {
-    background: url("${logo}") 0px 0px no-repeat;
+/****** Text ******/
+  .searchLbl, .browseLbl {
+    color: ${colorBanner}; /*colorBanner*/
   }
-  .bg-color1 {
-    background-color: ${color1};
+  .ColumLeft .TabLeft {
+    color: ${colorContent}; /*colorContent*/
   }
-  .color1 {
-    color: ${color1};
+  .ColumLeft li ul li a {
+    color: ${colorContent}; /*colorContent*/
   }
-  .bg-color2 {
-    background-color: ${color2};
+  
+/****** Logo ******/
+  .logoMob {
+    background: url("${logo}") no-repeat scroll 0 10px / 94px 39px transparent;
+	
   }
-  .color2 {
-    color: ${color2};
-  }
-  .bg-color3 {
-    background-color: ${color3};
-  }
-  .color3 {
-    color: ${color3};
-  }
-  .bg-color4 {
-    background-color: ${color4};
-  }
-  .color4 {
-    color: ${color4};
-  }
-  .bg-color5 {
-    background-color: ${color5};
-  }
-  .color5 {
-    color: ${color5};
-  }
+  
+/******color 1******/
+  .bannerBar {
+    background-color: ${color1}; /*color1*/
+   }
+/******color 2******/
+  .searchBar, .browseBar {
+	background-color: ${color2}; /*color2*/
+	}	
+  
+/******color 3******/
+  .ColumLeft .TabLeft {
+    background-color: ${color3}; /* color3 */
+	}
+  .ColumLeft li .IconClose, .ColumLeft li .IconExplain {
+    background-color: ${color3}; /* color3 */
+	}
+  .ColumLeft li .IconExplain:focus, .ColumLeft li .IconExplain:active{
+	background-color: ${color3}; 		/*color3 */
+	}
+  .ColumLeft .TabLeft:focus, .ColumLeft .TabLeft:active{
+	background-color: ${color3};		/*color3 */
+	}
+  .ColumLeft li ul li:hover, .ColumLeft li ul li.SelectedContent {
+    background-color: ${color3} !important; /*color3*/
+   }
+  
+/******color 4******/
+  .ColumLeft .TabLeft {
+	border-color: ${color4}; /* color4 */
+	}
+   .ColumLeft li .IconClose:hover, .ColumLeft li .IconExplain:hover {
+	 background-color: ${color4}; /* color4 */
+	}
+  .ColumLeft .TabLeft:hover {
+	background-color: ${color4}; /* color4 */
+	}
+  .ColumLeft li ul li {
+    background-color: ${color4}; /*color4*/
+	}
+	
+/******color 5******/
+  .mobileSearchBox {
+    background-color: ${color5}; /* color 5 */
+   }
+  
 </style>

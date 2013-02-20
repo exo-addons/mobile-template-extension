@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     Copyright (C) 2009 eXo Platform SAS.
@@ -19,24 +19,20 @@
     02110-1301 USA, or see the FSF site: http://www.fsf.org.
 
 -->
-
-<portal-config
+<gatein-resources
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_2 http://www.gatein.org/xml/ns/gatein_objects_1_2"
-    xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_2">
-  <portal-name>Mobile Website</portal-name>
-  <locale>en</locale>
-  <access-permissions>Everyone</access-permissions>
-  <edit-permission>*:/platform/web-contributors</edit-permission>
-  <properties>
-    <entry key="sessionAlive">onDemand</entry>
-    <entry key="showPortletInfo">0</entry>
-  </properties>
+    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_2 http://www.gatein.org/xml/ns/gatein_resources_1_2"
+    xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_2">
 
-  <portal-layout id="template-mobile">
-    <page-body>
-    </page-body>
-		
-  </portal-layout>
-
-</portal-config>
+	
+	<!-- portal Skin -->
+	
+     <portal-skin>
+		<skin-name>Default</skin-name>
+		<skin-module>MobileTmpl</skin-module>
+		<css-path>/skin/Stylesheet.css</css-path>
+		<css-priority>1</css-priority>
+		<overwrite>true</overwrite>
+	</portal-skin>
+	
+</gatein-resources>

@@ -152,7 +152,7 @@ private void renderCategoryMenu() {
       
 <div class="UIMicroSite">
   <div class="UIContainer">
-    <div class="ColumLeft">
+    <div class="ColumLeft color3">
       <ul>
         <%
           renderCategories();

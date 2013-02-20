@@ -19,7 +19,7 @@
     </supports>
     <supported-locale>en</supported-locale>
     <supported-locale>fr</supported-locale>
-    <resource-bundle>locale.portlet.mobile.Resource</resource-bundle>
+    <resource-bundle>locale.portlet.mobile.resource</resource-bundle>
     <portlet-info>
       <title>Mobile Theme</title>
       <short-title>Mobile Theme</short-title>
@@ -33,27 +33,37 @@
       </preference>
       <preference>
         <name>color1</name>
-        <value>#C4D4CB</value>
+        <value>#333333</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color2</name>
-        <value>#55665E</value>
+        <value>#486A9D</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color3</name>
-        <value>#30282A</value>
+        <value>#F6F6F6</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color4</name>
-        <value>#542733</value>
+        <value>#E6E6E6</value>
         <read-only>false</read-only>
       </preference>
       <preference>
         <name>color5</name>
-        <value>#542733</value>
+        <value>#FFCB08</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>colorBanner</name>
+        <value>#FFFFFF</value>
+        <read-only>false</read-only>
+      </preference>
+      <preference>
+        <name>colorContent</name>
+        <value>#1B1B1B</value>
         <read-only>false</read-only>
       </preference>
     </portlet-preferences>
@@ -74,7 +84,7 @@
     </supports>
     <supported-locale>en</supported-locale>
     <supported-locale>fr</supported-locale>
-    <resource-bundle>locale.portlet.mobile.Resource</resource-bundle>
+    <resource-bundle>locale.portlet.mobile.resource</resource-bundle>
     <portlet-info>
       <title>Mobile Switcher</title>
       <short-title>Mobile Switcher</short-title>

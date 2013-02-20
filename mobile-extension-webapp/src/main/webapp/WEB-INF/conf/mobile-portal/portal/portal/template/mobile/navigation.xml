@@ -33,69 +33,6 @@
       <visibility>DISPLAYED</visibility>
       <page-reference>portal::@owner@::overview</page-reference>
     </node>
-    
-    <node>
-      <uri>news</uri>
-      <name>news</name>
-      <label xml:lang="en">News</label>
-      <visibility>DISPLAYED</visibility>
-      <page-reference>portal::@owner@::news</page-reference>
-    </node>
-
-    <node>
-      <uri>products</uri>
-      <name>products</name>
-      <label xml:lang="en">Products</label>
-      <visibility>DISPLAYED</visibility>
-      <page-reference>portal::@owner@::products</page-reference>
-      <node>
-	      <uri>products/eventing</uri>
-	      <name>eventing</name>
-	      <label xml:lang="en">Eventing</label>
-	      <visibility>DISPLAYED</visibility>
-	      <page-reference>portal::@owner@::eventing</page-reference>
-	   </node>
-      <node>
-	      <uri>products/gallery</uri>
-	      <name>gallery</name>
-	      <label xml:lang="en">Gallery</label>
-	      <visibility>DISPLAYED</visibility>
-	      <page-reference>portal::@owner@::gallery</page-reference>
-	   </node>
-    </node>
-
-    
-
-    <node>
-      <uri>contactus</uri>
-      <name>contactus</name>
-      <label xml:lang="en">Contact Us</label>
-      <page-reference>portal::@owner@::contactus</page-reference>
-      <node>
-        <uri>contactus/confirmation</uri>
-        <name>confirmation</name>
-        <label xml:lang="en">Confirmation</label>
-        <visibility>HIDDEN</visibility>
-        <page-reference>portal::@owner@::confirmation</page-reference>
-      </node>
-    </node>
-
-    <node>
-      <uri>detail</uri>
-      <name>detail</name>
-      <label xml:lang="en">Detail</label>
-      <visibility>SYSTEM</visibility>
-      <page-reference>portal::@owner@::detail</page-reference>
-    </node>
-	
-	<node>
-      <uri>catalog</uri>
-      <name>catalog</name>
-      <label xml:lang="en">Catalog</label>
-      <visibility>SYSTEM</visibility>
-      <page-reference>portal::@owner@::catalog</page-reference>
-    </node>
-
     <node>
       <uri>printviewer</uri>
       <name>printviewer</name>
@@ -103,7 +40,6 @@
       <visibility>SYSTEM</visibility>
       <page-reference>portal::@owner@::printviewer</page-reference>
     </node>
-
     <node>
       <uri>searchResult</uri>
       <name>searchResult</name>
@@ -111,14 +47,5 @@
       <visibility>HIDDEN</visibility>
       <page-reference>portal::@owner@::searchResult</page-reference>
     </node>
-
-    <node>
-      <uri>newAccount</uri>
-      <name>newAccount</name>
-      <label xml:lang="en">New Account</label>
-      <visibility>HIDDEN</visibility>
-      <page-reference>portal::@owner@::newAccount</page-reference>
-    </node>
-
   </page-nodes>
 </node-navigation>

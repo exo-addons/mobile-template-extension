@@ -46,17 +46,19 @@ public class MobileThemeApplication {
   Template feedTemplate;
 
   String url_ = "https://kuler-api.adobe.com/rss/get.cfm?key=9A2E468872FE17525244F66635D22B83&listtype=";
-  int size_ = 20;
+  int size_ = 30;
 
   @View
   public void index(RenderContext renderContext) throws IOException
   {
-    String logoURL = portletPreferences.getValue("logo", "/rest/jcr/repository/collaboration/sites%20content/live/default/web%20contents/site%20artifacts/welcome/medias/images/Logo.png");
-    String color1 = portletPreferences.getValue("color1", "#3366FF");
-    String color2 = portletPreferences.getValue("color2", "#333333");
-    String color3 = portletPreferences.getValue("color3", "#666666");
-    String color4 = portletPreferences.getValue("color4", "#AAAAAA");
-    String color5 = portletPreferences.getValue("color5", "#FFFFFF");
+    String logoURL = portletPreferences.getValue("logo", "/rest/jcr/repository/collaboration/sites content/live/default/web contents/site artifacts/welcome/medias/images/Logo.png");
+    String color1 = portletPreferences.getValue("color1", "#174C4F");
+    String color2 = portletPreferences.getValue("color2", "#207178");
+    String color3 = portletPreferences.getValue("color3", "#FF9666");
+    String color4 = portletPreferences.getValue("color4", "#FFE184");
+    String color5 = portletPreferences.getValue("color5", "#F5E9BE");
+    String colorBanner = portletPreferences.getValue("colorBanner", "#FFFFFF");
+    String colorContent = portletPreferences.getValue("colorContent", "#1B1B1B");
 
     PortletMode portletMode = renderContext.getProperty(JuzuPortlet.PORTLET_MODE);
     if (portletMode.equals(PortletMode.VIEW))
@@ -67,6 +69,8 @@ public class MobileThemeApplication {
             .set("color3", color3)
             .set("color4", color4)
             .set("color5", color5)
+            .set("colorBanner", colorBanner)
+            .set("colorContent", colorContent)
             .render();
     }
     else
@@ -77,12 +81,14 @@ public class MobileThemeApplication {
               .set("color3", color3)
               .set("color4", color4)
               .set("color5", color5)
+              .set("colorBanner", colorBanner)
+              .set("colorContent", colorContent)
               .render();
     }
   }
 
   @Action
-  public void save(String logo, String color1, String color2, String color3, String color4, String color5)
+  public void save(String logo, String color1, String color2, String color3, String color4, String color5, String colorBanner, String colorContent )
   {
     try {
       portletPreferences.setValue("logo", logo);
@@ -91,6 +97,8 @@ public class MobileThemeApplication {
       portletPreferences.setValue("color3", color3);
       portletPreferences.setValue("color4", color4);
       portletPreferences.setValue("color5", color5);
+      portletPreferences.setValue("colorBanner", colorBanner);
+      portletPreferences.setValue("colorContent", colorContent);
       portletPreferences.store();
     } catch (ReadOnlyException e) {
     } catch (ValidatorException e) {
@@ -101,7 +109,7 @@ public class MobileThemeApplication {
   @Resource
   public void getFeed(String type) throws Exception {
 
-    Document document_ = getData(url_+type);
+    Document document_ = getData(url_+type+"&itemsPerPage="+size_);
 
     NodeList nodeList = document_.getElementsByTagName("item");
 
