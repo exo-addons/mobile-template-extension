@@ -1,0 +1,79 @@
+<%
+import java.util.ArrayList;
+import java.util.List;
+import org.exoplatform.webui.form.UIFormRadioBoxInput;
+import org.exoplatform.webui.form.UIFormSelectBox;
+import org.exoplatform.webui.form.UIFormStringInput;
+import org.exoplatform.wcm.webui.search.UISearchForm;
+%>
+<%
+UIFormStringInput uiKeywordInput = uicomponent.getUIStringInput(UISearchForm.KEYWORD_INPUT);
+uicomponent.setKeyword();
+UIFormSelectBox uiPortalSelectBox = uicomponent.getUIFormSelectBox(UISearchForm.PORTALS_SELECTOR);
+UIFormRadioBoxInput searchOptionRadioBox = uicomponent.getUIFormRadioBoxInput(UISearchForm.SEARCH_OPTION);
+String actionLabel = _ctx.appRes("UIDefaultSearchForm.action.Search");
+String link = uicomponent.event("Search");
+def context = _ctx.getRequestContext();
+def jsManager = context.getJavascriptManager();
+jsManager.importJavascript('eXo.wcm.frontoffice.public.Search', '/eXoWCMResources/javascript/');
+context.getJavascriptManager().addJavascript('eXo.ecm.SearchPortlet.search("' + uicomponent.id + '");');
+%>
+
+<div class="UIForm $uicomponent.id" >
+  <%uiform.begin()%>
+    <div class="SearchHorizontalLayout">
+      <div class="FormContainer">
+        <table class="UIFormGrid">
+          <tr>
+            <td>
+              <% uiform.renderField(uiKeywordInput) %>
+              <span class="UIAction">
+                <a href="$link" onclick="eXo.ecm.SearchPortlet.keepKeywordOnBoxSearch();" class="ActionButton LightBlueStyle SearchButton">$actionLabel</a>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+               <fieldset style="border:none;"><legend> </legend><%uiform.renderField(searchOptionRadioBox)%>
+                 <label for="<%=uiPortalSelectBox.getId()%>"><% uiform.renderField(uiPortalSelectBox) %></label>
+               </fieldset>
+            </td>
+          </tr>
+        </table>
+        <script type="text/javascript">
+        
+        function toggleSet()
+        {
+          var searchOption = document.getElementsByName("searchOption");
+          if (searchOption[0].checked) {
+            searchOption[0].form.elements["portalSelector"].value = eXo.env.portal.portalName;
+            searchOption[0].form.elements["portalSelector"].disabled = true;
+          } else {
+            searchOption[0].form.elements["portalSelector"].value = 'all';
+            searchOption[0].form.elements["portalSelector"].disabled = false;
+          }
+        }
+        
+        var searchOption = document.getElementsByName("searchOption");
+        if (searchOption[0].checked) {
+          searchOption[0].form.elements["portalSelector"].value = eXo.env.portal.portalName;
+          searchOption[0].form.elements["portalSelector"].disabled = true;
+        } else {
+          searchOption[0].form.elements["portalSelector"].disabled = false;
+        }
+        searchOption[0].onchange = function() { toggleSet(); };
+        searchOption[1].onchange = function() { toggleSet(); };
+      </script>
+    </div>
+    </div>
+    <%uiform.end()%>
+    </div>
+<script type="text/javascript">
+	onload = function() {
+		eXo.ecm.SearchPortlet.keepKeywordOnBoxSearch();
+	}
+	onsubmit = function() {
+		eXo.ecm.SearchPortlet.keepKeywordOnBoxSearch();
+	}
+</script>
+    

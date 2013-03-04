@@ -1,30 +1,25 @@
     <form action="@{save()}" method="POST">
-      &{mobile.addon.logo.url}&nbsp;<i style=" color: lightgray;font-size: 10px;" >(&{mobile.addon.url.desc})</i>&nbsp;<input name="logo" value="${logo}" size="140" style="width:100%"><br>
+      <span class="labelLogo labelPan">&{mobile.addon.logo.url}</span><input placeholder="&{mobile.addon.url.desc}" name="logo" value="${logo}" size="140" style="width:636px"><br>
       <div class="bgPan">
         <span class="kulerPan">
 			  <span class="labelPan">&{mobile.addon.color} 1</span>
-			  <input style="width: 90px;" name="color1" class="colors" value="${color1}" size="7">&nbsp;
-			  <span id="preview-color1" style="padding: 2px 9px;"></span>
+			  <input style="width: 90px;" name="color1" class="colors" value="${color1}" size="7">&nbsp;<span id="preview-color1" style="padding: 2px 9px;"></span>
 		  <br>
 			  <span class="labelPan">&{mobile.addon.color} 2</span>
-			  <input style="width: 90px;" name="color2" class="colors" value="${color2}" size="7">&nbsp;
-			  <span id="preview-color2" style="padding: 2px 9px;"></span>
+			  <input style="width: 90px;" name="color2" class="colors" value="${color2}" size="7">&nbsp;<span id="preview-color2" style="padding: 2px 9px;"></span>
 		  <br>
 			  <span class="labelPan">&{mobile.addon.color} 3</span>
-			  <input style="width: 90px;" name="color3" class="colors" value="${color3}" size="7">&nbsp;
-			  <span id="preview-color3" style="padding: 2px 9px;"></span>
+			  <input style="width: 90px;" name="color3" class="colors" value="${color3}" size="7">&nbsp;<span id="preview-color3" style="padding: 2px 9px;"></span>
 		  <br>
 			  <span class="labelPan">&{mobile.addon.color} 4</span>
-			  <input style="width: 90px;" name="color4" class="colors" value="${color4}" size="7">&nbsp;
-			  <span id="preview-color4" style="padding: 2px 9px;"></span>
+			  <input style="width: 90px;" name="color4" class="colors" value="${color4}" size="7">&nbsp;<span id="preview-color4" style="padding: 2px 9px;"></span>
 		  <br>
 			  <span class="labelPan">&{mobile.addon.color} 5</span>
-			  <input style="width: 90px;" name="color5" class="colors" value="${color5}" size="7">&nbsp;
-			  <span id="preview-color5" style="padding: 2px 9px;"></span>
+			  <input style="width: 90px;" name="color5" class="colors" value="${color5}" size="7">&nbsp;<span id="preview-color5" style="padding: 2px 9px;"></span>
 		  <br>
         </span>
         <span>
-          <a style="text-align: center; float: right; width: 58px;" href="http://kuler.adobe.com" target="_new">
+          <a class="icon-kuler" href="http://kuler.adobe.com" target="_new">
 			<img src="/mobile-apps/img/ku_50pxBugOnly.png" width="25px" height="25px" />
 		  </a>
           &nbsp;&nbsp;&nbsp;
@@ -40,16 +35,14 @@
       <div>
         <span class="contentPan">
 			   <span class="labelPan">&{mobile.addon.banner}</span>
-			   <input style="width: 90px;" name="colorBanner" class="colors" value="${colorBanner}" size="7">&nbsp;
-			   <span id="preview-colorBanner" style="padding: 2px 9px;"></span>
+			   <input style="width: 90px;" name="colorBanner" class="colors" value="${colorBanner}" size="7">&nbsp;<span id="preview-colorBanner" style="padding: 2px 9px;"></span>
 		   <br>
 			   <span class="labelPan">&{mobile.addon.content}</span>
-			   <input style="width: 90px;" name="colorContent" class="colors" value="${colorContent}" size="7">&nbsp;
-			   <span id="preview-colorContent" style="padding: 2px 9px;"></span>
+			   <input style="width: 90px;" name="colorContent" class="colors" value="${colorContent}" size="7">&nbsp;<span id="preview-colorContent" style="padding: 2px 9px;"></span>
 		   <br>
         </span>
       </div>
-      <div style="clear:both; padding: 10px 0 0 50px;">
+      <div style="clear:both; padding: 5px 0 0 50px;">
         <input type="submit" value="&{mobile.addon.save}">
       </div>
     </form>

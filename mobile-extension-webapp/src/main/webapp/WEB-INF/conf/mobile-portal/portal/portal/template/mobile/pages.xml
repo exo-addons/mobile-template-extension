@@ -402,8 +402,118 @@
     <title>SearchResult</title>
     <access-permissions>Everyone</access-permissions>
     <edit-permission>editor:/platform/web-contributors</edit-permission>
-     <!-- SCV for Main Content  -->
-      <portlet-application>
+     <!-- Website Banner -->
+		<portlet-application>
+          <portlet>
+            <application-ref>presentation</application-ref>
+            <portlet-ref>SingleContentViewer</portlet-ref>
+            <preferences>
+              <preference>
+                <name>workspace</name>
+                <value>collaboration</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>nodeIdentifier</name>
+                <value>/sites content/live/@owner@/web contents/site artifacts/banner-mobile</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowQuickEdit</name>
+                <value>true</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowPrintAction</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTOC</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTags</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowCategories</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTitle</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Mobile Website Banner</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+          <show-application-state>false</show-application-state>
+          <show-application-mode>false</show-application-mode>
+        </portlet-application>
+		
+		<!-- Search Result Bar -->
+        <portlet-application>
+          <portlet>
+            <application-ref>presentation</application-ref>
+            <portlet-ref>SingleContentViewer</portlet-ref>
+            <preferences>
+              <preference>
+                <name>workspace</name>
+                <value>collaboration</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>nodeIdentifier</name>
+                <value>/sites content/live/@owner@/web contents/site artifacts/search-result-bar-mobile</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowQuickEdit</name>
+                <value>true</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowPrintAction</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTOC</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTags</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowCategories</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+              <preference>
+                <name>ShowTitle</name>
+                <value>false</value>
+                <read-only>false</read-only>
+              </preference>
+            </preferences>
+          </portlet>
+          <title>Search Bar</title>
+          <access-permissions>Everyone</access-permissions>
+          <show-info-bar>false</show-info-bar>
+          <show-application-state>false</show-application-state>
+          <show-application-mode>false</show-application-mode>
+        </portlet-application>
+		
+	    <!-- SCV for Main Content  -->
+        <portlet-application>
           <portlet>
             <application-ref>presentation</application-ref>
             <portlet-ref>SingleContentViewer</portlet-ref>
@@ -457,65 +567,65 @@
           <show-application-mode>false</show-application-mode>
         </portlet-application>
       
-    <portlet-application>
-      <portlet>
-        <application-ref>searches</application-ref>
-        <portlet-ref>WCMAdvanceSearchPortlet</portlet-ref>
-        <preferences>
-          <preference>
-            <name>workspace</name>
-            <value>collaboration</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>searchFormTemplatePath</name>
-            <value>/exo:ecm/views/templates/WCM Advance Search/search-form/UIDefaultSearchForm.gtmpl</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>searchResultTemplatePath</name>
-            <value>/exo:ecm/views/templates/WCM Advance Search/search-result/UIDefaultSearchResult.gtmpl</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>searchPaginatorTemplatePath</name>
-            <value>/exo:ecm/views/templates/WCM Advance Search/search-paginator/UIDefaultSearchPaginator.gtmpl</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>searchPageLayoutTemplatePath</name>
-            <value>/exo:ecm/views/templates/WCM Advance Search/search-page-layout/UISearchPageLayoutDefault.gtmpl</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>itemsPerPage</name>
-            <value>5</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>showQuickEditButton</name>
-            <value>true</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>basePath</name>
-            <value>detail</value>
-            <read-only>false</read-only>
-          </preference>
-          <preference>
-            <name>detailParameterName</name>
-            <value>content-id</value>
-            <read-only>false</read-only>
-          </preference>          
-        </preferences>
-      </portlet>
-      <title>SearchResult</title>
-      <access-permissions>Everyone</access-permissions>
-      <show-info-bar>false</show-info-bar>
-      <show-application-state>false</show-application-state>
-      <show-application-mode>false</show-application-mode>
-    </portlet-application>
-  </page>
+		<portlet-application>
+		  <portlet>
+			<application-ref>searches</application-ref>
+			<portlet-ref>WCMAdvanceSearchPortlet</portlet-ref>
+			<preferences>
+			  <preference>
+				<name>workspace</name>
+				<value>collaboration</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>searchFormTemplatePath</name>
+				<value>/exo:ecm/views/templates/WCM Advance Search/search-form/UIMobileSearchForm.gtmpl</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>searchResultTemplatePath</name>
+				<value>/exo:ecm/views/templates/WCM Advance Search/search-result/UIDefaultSearchResult.gtmpl</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>searchPaginatorTemplatePath</name>
+				<value>/exo:ecm/views/templates/WCM Advance Search/search-paginator/UIDefaultSearchPaginator.gtmpl</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>searchPageLayoutTemplatePath</name>
+				<value>/exo:ecm/views/templates/WCM Advance Search/search-page-layout/UISearchPageLayoutDefault.gtmpl</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>itemsPerPage</name>
+				<value>5</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>showQuickEditButton</name>
+				<value>true</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>basePath</name>
+				<value>detail</value>
+				<read-only>false</read-only>
+			  </preference>
+			  <preference>
+				<name>detailParameterName</name>
+				<value>content-id</value>
+				<read-only>false</read-only>
+			  </preference>          
+			</preferences>
+		  </portlet>
+		  <title>SearchResult</title>
+		  <access-permissions>Everyone</access-permissions>
+		  <show-info-bar>false</show-info-bar>
+		  <show-application-state>false</show-application-state>
+		  <show-application-mode>false</show-application-mode>
+		</portlet-application>
+	  </page>
 
   <page>
     <name>detail</name>

@@ -34,7 +34,6 @@
 			<description>This plugin deploy some initial webcontent as site artifact to site artifact folder of portal when a portal is created</description>
 			<init-params>
 				<object-param>
-				
 				  <name>Mobile Stylesheet</name>
 				  <description>Deployment Descriptor</description>
 				  <object type="org.exoplatform.services.deployment.DeploymentDescriptor">
@@ -115,6 +114,26 @@
 				</object-param>
 				
 				<object-param>
+				  <name>Mobile Search Result Bar</name>
+				  <description>Deployment Descriptor</description>
+				  <object type="org.exoplatform.services.deployment.DeploymentDescriptor">
+					<field name="target">
+					  <object type="org.exoplatform.services.deployment.DeploymentDescriptor$Target">
+						<field name="workspace">
+						  <string>collaboration</string>
+						</field>
+						<field name="nodePath">
+						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						</field>
+					  </object>
+					</field>
+					<field name="sourcePath">
+					  <string>war:/conf/mobile-portal/wcm/artifacts/site-resources/templates/MobileSearchResultBox.xml</string>
+					</field>       
+				  </object>
+				</object-param>
+				
+				<object-param>
 				  <name>Mobile Search Box</name>
 				  <description>Deployment Descriptor</description>
 				  <object type="org.exoplatform.services.deployment.DeploymentDescriptor">
@@ -154,8 +173,7 @@
 				  </object>
 				</object-param>
 				
-				
-				<!-- WAI Resources -->
+				<!-- WAI Portal Resources -->
 				<object-param>
 				  <name>Home content</name>
 				  <description>Deployment Descriptor</description>
@@ -171,7 +189,7 @@
 					  </object>
 					</field>
 					<field name="sourcePath">
-					  <string>war:/conf/sample-portal/wcm/artifacts/site-resources/WAIPortal/home.xml</string>
+					  <string>war:/conf/mobile-portal/wcm/artifacts/site-resources/templates/home.xml</string>
 					</field>
 				  </object>
 				</object-param>
@@ -193,7 +211,7 @@
 					  </object>
 					</field>
 					<field name="sourcePath">
-					  <string>war:/conf/sample-portal/wcm/artifacts/site-resources/WAIPortal/Features.xml</string>
+					  <string>war:/conf/mobile-portal/wcm/artifacts/site-resources/templates/Features.xml</string>
 					</field>
 				  </object>
 				</object-param>
@@ -213,7 +231,7 @@
 					  </object>
 					</field>
 					<field name="sourcePath">
-					  <string>war:/conf/sample-portal/wcm/artifacts/site-resources/WAIPortal/Technology.xml</string>
+					  <string>war:/conf/mobile-portal/wcm/artifacts/site-resources/templates/Technology.xml</string>
 					</field>
 				  </object>
 				</object-param>
@@ -233,10 +251,10 @@
 					  </object>
 					</field>
 					<field name="sourcePath">
-					  <string>war:/conf/sample-portal/wcm/artifacts/site-resources/WAIPortal/Competence.xml</string>
+					  <string>war:/conf/mobile-portal/wcm/artifacts/site-resources/templates/Competence.xml</string>
 					</field>
 				  </object>
-				</object-param>  
+				</object-param>   
 				
 				<object-param>
 				  <name>Customers Folder</name>
@@ -253,7 +271,7 @@
 					  </object>
 					</field>
 					<field name="sourcePath">
-					  <string>war:/conf/sample-portal/wcm/artifacts/site-resources/WAIPortal/Customers.xml</string>
+					  <string>war:/conf/mobile-portal/wcm/artifacts/site-resources/templates/Customers.xml</string>
 					</field>
 				  </object>
 				</object-param>
@@ -719,7 +737,7 @@
 		  </init-params>
 		</component-plugin>
 
-    <component-plugin>
+		<component-plugin>
 		  <name>template-mobile-link</name>
 		  <set-method>addPlugin</set-method>
 		  <type>org.exoplatform.services.wcm.link.CreatePortalLinkPlugin</type>
