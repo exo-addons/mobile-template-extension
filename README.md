@@ -26,7 +26,7 @@ In order to install the extension, you need to build the project. Run this comma
 
 eXo Platform 3.5 offers the way to the end user to create his own website based on a set of website and intranet templates. The end user is also able to create his own website template in order to automate the creation and the configuration phases.
 I had the idea to create a template which may be used in the purpose of the creation of a mobile website based on HTML5 standards.
-![alt text] (https://github.com/eghodbane/mobile-template/blob/master/resources/screenshots/Snap1.png "Adding a Mobile website using the template mechanism")
+
 The end user may select the mobile website template from the list of sites templates and then he will get a preconfigured website designed to be used in a mobile web browser. He needs to add also the other parameters such portal and permission settings.
  
 This website will inject the viewport metadata in order to increase the ability to zoom web pages for easier reading in the mobile web browser.
