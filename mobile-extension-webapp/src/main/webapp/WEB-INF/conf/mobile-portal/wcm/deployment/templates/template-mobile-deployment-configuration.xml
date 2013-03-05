@@ -893,6 +893,7 @@
 					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/browse-bar-mobile</string></value>
 					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/search-bar-mobile</string></value>
 					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/search-box-mobile</string></value>
+					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/search-result-bar-mobile</string></value>
 				  </collection>
 				</field>
 			  </object>

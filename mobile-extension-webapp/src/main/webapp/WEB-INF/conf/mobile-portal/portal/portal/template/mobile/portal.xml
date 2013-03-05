@@ -36,6 +36,20 @@
   <portal-layout id="template-mobile">
     <page-body>
     </page-body>
+	
+	<!-- Mobile Theme Application -->
+	    <portlet-application>
+		      <portlet>
+		        <application-ref>mobile-apps</application-ref>
+		        <portlet-ref>MobileThemeApplication</portlet-ref>
+		        <preferences></preferences>
+		      </portlet>
+		      <title>Mobile Theme</title>
+		      <access-permissions>Everyone</access-permissions>
+		      <show-info-bar>false</show-info-bar>
+		      <show-application-state>false</show-application-state>
+		      <show-application-mode>false</show-application-mode>
+		</portlet-application> 
 		
   </portal-layout>
 
