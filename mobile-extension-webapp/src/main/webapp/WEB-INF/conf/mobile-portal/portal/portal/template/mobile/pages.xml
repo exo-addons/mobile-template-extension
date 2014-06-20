@@ -40,7 +40,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/banner-mobile</value>
+                <value>/sites/@owner@/web contents/site artifacts/banner-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -95,7 +95,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/search-bar-mobile</value>
+                <value>/sites/@owner@/web contents/site artifacts/search-bar-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -150,7 +150,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/search-box-mobile</value>
+                <value>/sites/@owner@/web contents/site artifacts/search-box-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -205,7 +205,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/browse-bar-mobile</value>
+                <value>/sites/@owner@/web contents/site artifacts/browse-bar-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -255,7 +255,7 @@
             <preferences>
               <preference>
                 <name>folderPath</name>
-                <value>repository:collaboration:/sites content/live/@owner@/categories/@owner@</value>
+                <value>repository:collaboration:/sites/@owner@/categories/@owner@</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -329,7 +329,7 @@
                 </preference>
                 <preference>
                   <name>nodeIdentifier</name>
-                  <value>/sites content/live/@owner@/categories/@owner@/home</value>
+                  <value>/sites/@owner@/categories/@owner@/home</value>
                   <read-only>false</read-only>
                 </preference>
                 <preference>
@@ -403,7 +403,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/banner-mobile</value>
+                <value>/sites/@owner@/web contents/site artifacts/banner-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -458,7 +458,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/search-result-bar-mobile</value>
+                <value>/sites/@owner@/web contents/site artifacts/search-result-bar-mobile</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -513,7 +513,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/main</value>
+                <value>/sites/@owner@/web contents/site artifacts/main</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -634,7 +634,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/main</value>
+                <value>/sites/@owner@/web contents/site artifacts/main</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -690,7 +690,7 @@
               </preference>
               <preference>
                 <name>nodeIdentifier</name>
-                <value>/sites content/live/@owner@/web contents/site artifacts/detail-bar</value>
+                <value>/sites/@owner@/web contents/site artifacts/detail-bar</value>
                 <read-only>false</read-only>
               </preference>
               <preference>
@@ -744,7 +744,7 @@
           </preference>
           <preference>
             <name>nodeIdentifier</name>
-            <value>/sites content/live/acme/web contents/site artifacts/Introduce</value>
+            <value>/sites/acme/web contents/site artifacts/Introduce</value>
             <read-only>false</read-only>
           </preference>
           <preference>
@@ -951,7 +951,7 @@
 							</preference>
 							<preference>
 								<name>nodeIdentifier</name>
-								<value>/sites content/live/acme/web contents/site artifacts/LinkHome</value>
+								<value>/sites/acme/web contents/site artifacts/LinkHome</value>
 								<read-only>false</read-only>
 							</preference>
 							<preference>

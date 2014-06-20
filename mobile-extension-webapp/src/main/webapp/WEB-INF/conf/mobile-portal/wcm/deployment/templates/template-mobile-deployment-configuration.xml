@@ -43,7 +43,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/css</string>
+						  <string>/sites/{portalName}/css</string>
 						</field>
 					  </object>
 					</field>
@@ -63,7 +63,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						  <string>/sites/{portalName}/web contents/site artifacts</string>
 						</field>
 					  </object>
 					</field>
@@ -83,7 +83,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						  <string>/sites/{portalName}/web contents/site artifacts</string>
 						</field>
 					  </object>
 					</field>
@@ -103,7 +103,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						  <string>/sites/{portalName}/web contents/site artifacts</string>
 						</field>
 					  </object>
 					</field>
@@ -123,7 +123,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						  <string>/sites/{portalName}/web contents/site artifacts</string>
 						</field>
 					  </object>
 					</field>
@@ -143,7 +143,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						  <string>/sites/{portalName}/web contents/site artifacts</string>
 						</field>
 					  </object>
 					</field>
@@ -163,7 +163,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents/site artifacts</string>
+						  <string>/sites/{portalName}/web contents/site artifacts</string>
 						</field>
 					  </object>
 					</field>
@@ -184,7 +184,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents</string>
+						  <string>/sites/{portalName}/web contents</string>
 						</field>
 					  </object>
 					</field>
@@ -206,7 +206,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents</string>
+						  <string>/sites/{portalName}/web contents</string>
 						</field>
 					  </object>
 					</field>
@@ -226,7 +226,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents</string>
+						  <string>/sites/{portalName}/web contents</string>
 						</field>
 					  </object>
 					</field>
@@ -246,7 +246,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents</string>
+						  <string>/sites/{portalName}/web contents</string>
 						</field>
 					  </object>
 					</field>
@@ -266,7 +266,7 @@
 						  <string>collaboration</string>
 						</field>
 						<field name="nodePath">
-						  <string>/sites content/live/{portalName}/web contents</string>
+						  <string>/sites/{portalName}/web contents</string>
 						</field>
 					  </object>
 					</field>
@@ -294,7 +294,7 @@
 			</value-param>
 			<value-param>
 			  <name>path</name>
-			  <value>/sites content/live/{portalName}/categories</value>
+			  <value>/sites/{portalName}/categories</value>
 			</value-param>
 			<value-param>
 			  <name>treeName</name>
@@ -393,13 +393,13 @@
 						  <string/>
 						</field>
 						<field name="homePath">
-						  <string>collaboration:/sites content/live/{portalName}/categories/{treeName}</string>
+						  <string>collaboration:/sites/{portalName}/categories/{treeName}</string>
 						</field>
 						<field name="targetWspace">
 						  <string>collaboration</string>
 						</field>
 						<field name="targetPath">
-						  <string>/sites content/live/{portalName}/web contents</string>
+						  <string>/sites/{portalName}/web contents</string>
 						</field>
 						<field name="lifecyclePhase">
 						  <collection type="java.util.ArrayList">
@@ -748,10 +748,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/home</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/home</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}</string>
 				</field>
 			  </object>
 			</object-param>
@@ -760,10 +760,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/competence/prepare-your-team</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/competence/prepare-your-team</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Competence</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Competence</string>
 				</field>
 			  </object>
 			</object-param>
@@ -772,10 +772,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/competence/work-with-a-partner</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/competence/work-with-a-partner</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Competence</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Competence</string>
 				</field>
 			  </object>
 			</object-param>
@@ -784,10 +784,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/customers/customer-success-stories</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/customers/customer-success-stories</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Customers</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Customers</string>
 				</field>
 			  </object>
 			</object-param>
@@ -796,10 +796,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/customers/subscription-support</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/customers/subscription-support</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Customers</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Customers</string>
 				</field>
 			  </object>
 			</object-param>
@@ -808,10 +808,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/features/portal-content</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/features/portal-content</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Features</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Features</string>
 				</field>
 			  </object>
 			</object-param>
@@ -820,10 +820,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/features/social-collaboration</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/features/social-collaboration</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Features</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Features</string>
 				</field>
 			  </object>
 			</object-param>
@@ -832,10 +832,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/features/the-platform-difference</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/features/the-platform-difference</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Features</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Features</string>
 				</field>
 			  </object>
 			</object-param>
@@ -844,10 +844,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/technology/integration</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/technology/integration</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Technology</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Technology</string>
 				</field>
 			  </object>
 			</object-param>
@@ -856,10 +856,10 @@
 			  <description>Deployment Descriptor</description>
 			  <object type="org.exoplatform.services.deployment.plugins.LinkDeploymentDescriptor">
 				<field name="sourcePath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/web contents/technology/technical-specifications</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/web contents/technology/technical-specifications</string>
 				</field>
 				<field name="targetPath">
-				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites content/live/{portalName}/categories/{portalName}/Technology</string>
+				  <string>${gatein.jcr.repository.default:repository}:collaboration:/sites/{portalName}/categories/{portalName}/Technology</string>
 				</field>
 			  </object>
 			</object-param>
@@ -878,22 +878,22 @@
 			  <object type="org.exoplatform.services.wcm.extensions.deployment.PublicationDeploymentDescriptor">
 				<field name="contents">
 				  <collection type="java.util.ArrayList">
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/home</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/technology/integration</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/technology/technical-specifications</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/features/portal-content</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/features/social-collaboration</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/features/the-platform-difference</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/customers/customer-success-stories</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/customers/subscription-support</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/competence/prepare-your-team</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/competence/work-with-a-partner</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/banner-mobile</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/welcome-banner-mobile</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/browse-bar-mobile</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/search-bar-mobile</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/search-box-mobile</string></value>
-					<value><string>collaboration:/sites content/live/{portalName}/web contents/site artifacts/search-result-bar-mobile</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/home</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/technology/integration</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/technology/technical-specifications</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/features/portal-content</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/features/social-collaboration</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/features/the-platform-difference</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/customers/customer-success-stories</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/customers/subscription-support</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/competence/prepare-your-team</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/competence/work-with-a-partner</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/site artifacts/banner-mobile</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/site artifacts/welcome-banner-mobile</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/site artifacts/browse-bar-mobile</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/site artifacts/search-bar-mobile</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/site artifacts/search-box-mobile</string></value>
+					<value><string>collaboration:/sites/{portalName}/web contents/site artifacts/search-result-bar-mobile</string></value>
 				  </collection>
 				</field>
 			  </object>
