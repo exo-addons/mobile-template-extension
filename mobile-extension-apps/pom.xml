@@ -26,55 +26,56 @@
       <groupId>org.juzu</groupId>
       <artifactId>juzu-core</artifactId>
       <version>${juzu.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.juzu</groupId>
       <artifactId>juzu-bom-core</artifactId>
       <version>${juzu.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.juzu</groupId>
       <artifactId>juzu-plugins-portlet</artifactId>
       <version>${juzu.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.juzu</groupId>
       <artifactId>juzu-plugins-less</artifactId>
       <version>${juzu.version}</version>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 
   <build>
     <finalName>mobile-apps</finalName>
     <plugins>
+      <!-- Precompile the template class in maven (this is optional) -->
       <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.3</version>
-        <dependencies>
-          <dependency>
-            <groupId>org.juzu</groupId>
-            <artifactId>juzu-bom-core</artifactId>
-            <version>${juzu.version}</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <appendAssemblyId>false</appendAssemblyId>
-          <attach>true</attach>
-        </configuration>
+        <groupId>org.codehaus.gmaven</groupId>
+        <artifactId>gmaven-plugin</artifactId>
+        <version>1.5</version>
         <executions>
           <execution>
-            <id>gatein</id>
             <goals>
-              <goal>single</goal>
+              <goal>compile</goal>
             </goals>
-            <phase>package</phase>
             <configuration>
-              <descriptorRefs>
-                <descriptorRef>gatein</descriptorRef>
-              </descriptorRefs>
+              <sources>
+                <fileset>
+                  <directory>${project.build.outputDirectory}</directory>
+                  <includes>
+                    <include>**/*.groovy</include>
+                  </includes>
+                </fileset>
+              </sources>
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
